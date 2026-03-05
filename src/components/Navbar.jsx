@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div>
+    <div className=" max-w-6xl mx-auto">
       <nav className="navbar flex items-center justify-between py-4">
         <h2 className="logo text-2xl font-bold">CS — Ticket System</h2>
         <div className="nav-items flex items-center space-x-6">

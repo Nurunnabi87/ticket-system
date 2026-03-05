@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import MainSection from "./components/MainSection";
 import Navbar from "./components/Navbar";
 import ticketsData from "./data/tickets";
@@ -20,7 +21,6 @@ function App() {
     setCustomerTickets(customerTickets.filter((t) => t.id !== ticket.id));
   };
 
-
   // Complete Task
   const handleComplete = (ticket) => {
     toast.info(`${ticket.title} marked as Resolved`);
@@ -30,8 +30,8 @@ function App() {
   };
   return (
     <>
-      <div className="main-container max-w-6xl mx-auto">
-        <Navbar />
+      <Navbar />
+      <div className="main-container bg-gray-100 ">
         <Banner inProgress={inProgress} resolved={resolved} />
         <MainSection
           customerTickets={customerTickets}
@@ -41,6 +41,7 @@ function App() {
           handleComplete={handleComplete}
         />
       </div>
+      <Footer />
     </>
   );
 }

@@ -10,7 +10,7 @@ const MainSection = ({
   handleComplete,
 }) => {
   return (
-    <div className="mt-10">
+    <div className="py-10 max-w-6xl mx-auto">
       {/* Toast Container */}
       <ToastContainer position="top-right" autoClose={2000} />
 
